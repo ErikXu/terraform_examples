@@ -1,0 +1,5 @@
+host = "{host}"            # 物理机 IP
+username = "{username}"    # 物理机登录用户名
+password = "{password}"    # 物理机登录密码
+os = "centos"              # 操作系统
+vhd_size = 214748364800    # 系统盘大小，示例为 200 GB，按需调整
