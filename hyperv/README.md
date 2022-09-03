@@ -6,6 +6,8 @@
 
 - 前期准备
 
+  使用 `管理员身份` 运行 `PowerShell`，执行以下指令：
+  
 ``` shell
 # Enable WinRM with negotiate authentication support
 Enable-PSRemoting -SkipNetworkProfileCheck -Force
