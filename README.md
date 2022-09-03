@@ -23,3 +23,19 @@ provider_installation {
     }
 }
 ```
+
+- 配置 Provide Cache - Linux
+
+  - 新增 Provide Cache 目录，例如：`$HOME/plugin-cache`
+
+  - 在 `$HOME` 下新增/编辑 `.terraformrc` 文件，内容如下：
+
+``` text
+plugin_cache_dir = "$HOME/plugin-cache"
+
+provider_installation {
+    filesystem_mirror {
+        path = "$HOME/plugin-cache"
+    }
+}
+```
