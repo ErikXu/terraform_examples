@@ -39,3 +39,51 @@ provider_installation {
     }
 }
 ```
+
+## 使用
+
+- 初始化
+
+``` bash
+terraform init
+```
+
+- 查看执行计划
+
+``` bash
+terraform plan -var-file="values.tfvars"
+```
+
+- 安装
+
+``` bash
+terraform apply -var-file="values.tfvars" -auto-approve
+```
+
+- 修改
+
+``` bash
+# 查看修改内容
+terraform plan -var-file="values.tfvars"
+
+# 执行修改
+terraform apply -var-file="values.tfvars" -auto-approve
+```
+
+- 卸载
+
+``` bash
+terraform destroy -var-file="values.tfvars" -auto-approve
+```
+
+- 添加/修改指定模块
+
+``` bash
+terraform apply -target="module.xxx" -var-file="values.tfvars"
+```
+
+- 卸载指定模块
+
+``` bash
+terraform apply -destroy -target="module.xxx" -var-file="values.tfvars"
+```
